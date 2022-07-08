@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import './Accordion.css';
 // Komponent Accodrion uzyty do budowy harmonijki
-const Accordion = ({ title, content, count, activeState }) => {
+const Accordion = ({ title, content, count }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
     <div className="accordion-item">
       <div
         className="accordion-title"
-        activeState={activeState}
         onClick={(event) => setIsActive(!isActive)}>
         <div>
           {title}
