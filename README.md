@@ -41,3 +41,8 @@ Zbyt mało elementów na stronie by można ocenić jak efektywnie wykorzystać r
 2. W poziomie trzecim są widoczne pola checkbox które można zaznaczyć kliknięciem na pole lub tekst.
 
     ![Checkbox](./doc/checkbox.png)
+
+## Źródła
+1.	Element **Accordion** utworzony z pomocą [freecodecamp.org]( https://www.freecodecamp.org/news/build-accordion-menu-in-react-without-external-libraries/).
+2.	Stworzenie komponentu do przechwycenia danych z API w oparciu o filimik YouTube [Hong Ly](https://www.youtube.com/watch?v=9V-Up8QT7tM&t=928s).
+
