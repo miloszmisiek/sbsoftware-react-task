@@ -1,46 +1,40 @@
-# Getting Started with Create React App and Redux
+# Zadanie rekrutacyjne
+---
+## Ogolne
+W zadaniu zostal podany link ktory zwracal Endpoint w postaci obiektu JSON.
+Pierwszy problem do rozwiazania polegal na obejsciu CORS (Cross-Origin Resource Sharing) , ktory uniemozliwial zebrania danych z linku.
+Rozwiazanie:
+- uzyty zostla serwer PROXY https://cors-anywhere.herokuapp.com/
+- aby dane mogly zostac poprawnie zebrane nalezy przejsc do strony [cors-anywhere](https://cors-anywhere.herokuapp.com/corsdemo) a nastepnie kliknac przycisk `Request temporary access to the demo server`
+- jezeli harmonijka miala by zostac uzyta w trypie produkcyjnym, lepszym rozwiazaniem byloby stworzyc wlasny serwer PROXY w celu rozwiazania problemu
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+## Zarzadanie stanem przez Redux Toolkit
+Do stworzenia aplikacji zostal uzyty React.js z wykorzystaniem [Redux Toolkit](https://redux-toolkit.js.org/) do zarzadzania stanu - z doumentacji mozna wyczytac ze jest to preferencyjna metoda wykorzystywana do tworzenia projektow.
 
-## Available Scripts
+## Harmonijka 'klon' forBET
+Harmonijka dostarczona w tym projekcie jest proba stworzenia kopii menu ze strony [forBET](https://www.iforbet.pl/).
+Efekty koncowe:
+1. **Sukcesy:**
+   - Wszystkie dane sa przetworzone z API Endpoint.
+   - Harmonijka zawiera 3 zagniedzone poziomy zgodnie z zakresem "level" obiektu JSON
+   - Glowne zakladki to obiekty, ktorych klucz "parentCategory" jest wartosci 0
+   - Kazdy kolejny poziom jest w relacji do poziomu zakladki rodzica z jego "categoryId"
+   - Obiekt JSON zostal przesortowany wedlug klucza "sortOrder"
+   - Przy kazdym tytule zakladki jest dolaczona informacja z klucza "eventsCount"
+   - Kategorie Esportowe zostaly wyselekcjonowane i zgrupowane w oddzielna kategorie 'Esport' na koncu harmonijki zgodnie z wytycznymi z zdania.
+2. **Bugi/bledy:**
+   - Zakladka nie zamyka sie jezeli zostanie otwarta kolejna - blad zostal zauwazony przy koncowym etapie budowania harmonijki, w obcenej postaci i z obecnym doswiadczniem wydaje sie to byc skomplikowanym procesem, nalezaloby przebudowac konstrukcje aby uwzglednic ta funkcje.
+   - Zmiana koloru przy klikniecu zakladki z poziomu 2 i 3 - j/w
+   - Ikonki przy kategoriach - w tresci zadania jest notatka *"Pod ocenę nie jest brany design"* w zwiazku z tym ikonki nie zostaly uzyte w zadaniu.
 
-In the project directory, you can run:
+## Responsywnosc
+Zbyt malo elementow na stronie by mozna ocenic jak efektywnie wykorzystac responsywnosc do urzadzen mobilnych - pominete w zadaniu.
 
-### `npm start`
+## Instrukcja dzialania
+1. Kliknij w komponent aby wyswietlic jego nastepny poziom:
+   
+   ![Poziomy](../doc/poziomy.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. W poziomie trzecim sa widoczne pola checkbox ktore mozna zaznaczyc kliknieciem na pole lub tekst.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ![Checkbox](../doc/checkbox.png)

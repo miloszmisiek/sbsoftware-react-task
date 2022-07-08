@@ -1,0 +1,42 @@
+/* CSS uzyty do stylizacji komponenta Accordion */
+.accordion-item {
+  max-width: 15rem;
+  cursor: pointer;
+}
+
+.accordion-title {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+  width: 100%;
+  align-self: center;
+}
+
+.accordion-lvl3 input {
+  margin-right: 0.4rem;
+}
+
+.text-mantee-2 {
+  color: rgba(87, 96, 130, 0.8);
+  padding-left: 0.4rem;
+}
+
+.accordion-lvl3 {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  font-weight: 400;
+  max-width: 15rem;
+  margin-left: 1vw;
+
+}
+
+.accordion-lvl3 label {
+  display: inline-block;
+  width: 10rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
