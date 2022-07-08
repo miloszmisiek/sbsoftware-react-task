@@ -33,8 +33,8 @@ Zbyt malo elementow na stronie by mozna ocenic jak efektywnie wykorzystac respon
 ## Instrukcja dzialania
 1. Kliknij w komponent aby wyswietlic jego nastepny poziom:
    
-   ![Poziomy](../doc/poziomy.png)
+   ![Poziomy](./doc/poziomy.png)
 
 2. W poziomie trzecim sa widoczne pola checkbox ktore mozna zaznaczyc kliknieciem na pole lub tekst.
 
-    ![Checkbox](../doc/checkbox.png)
+    ![Checkbox](./doc/checkbox.png)
